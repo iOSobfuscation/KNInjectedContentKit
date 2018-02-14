@@ -147,7 +147,7 @@ function addInjectedContent {
 
 		echo ">>>>>>>${injected_content}"
 		# mark: sed 命令中使用变量 http://blog.csdn.net/lepton126/article/details/36374933
-		sed -i '/^- \(.*\)/{
+		sed -i '/^- \(.*\){$/{
 			a\ '"$injected_content"'
 		}' ${file}
 

@@ -9,10 +9,6 @@
 #import "ICKViewController.h"
 #import <InjectedContentKit.h>
 
-@interface ICKViewController ()
-
-@end
-
 @implementation ICKViewController
 
 - (void)viewDidLoad

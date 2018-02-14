@@ -10,6 +10,20 @@
 
 @implementation ICKAppDelegate
 
+//#define barrier() __asm__ volatile ("lwsync")
+static ICKAppDelegate* instance;
+
++ (instancetype)shareInstance {
+    if (!instance) {
+        @synchronized(self) {
+            ICKAppDelegate* obj = [[ICKAppDelegate alloc] init];
+//            barrier();
+            instance = obj;
+        }
+    }
+    return instance;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

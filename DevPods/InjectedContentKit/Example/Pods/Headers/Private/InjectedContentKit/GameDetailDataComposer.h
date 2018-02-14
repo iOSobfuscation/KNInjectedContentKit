@@ -1,0 +1,1 @@
+../../../../../InjectedContentKit/Classes/Composer/GameDetailDataComposer.h

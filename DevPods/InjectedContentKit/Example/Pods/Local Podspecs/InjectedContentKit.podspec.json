@@ -1,0 +1,28 @@
+{
+  "name": "InjectedContentKit",
+  "version": "0.1.0",
+  "summary": "A short description of InjectedContentKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/flypigrmvb/InjectedContentKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "flypigrmvb": "862709539@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/flypigrmvb/InjectedContentKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "InjectedContentKit/Classes/**/*",
+  "public_header_files": "Pod/Classes/**/*.h",
+  "prefix_header_contents": [
+    "#import \"ICK_NetworkInterfaceManager.h\"",
+    "#import \"ICK_UtilMacro.h\"",
+    "#import \"ICK_MMSessionTask.h\""
+  ]
+}

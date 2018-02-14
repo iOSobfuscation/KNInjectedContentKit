@@ -1,0 +1,11 @@
+#use_frameworks!
+
+target 'InjectedContentKit_Example' do
+  pod 'InjectedContentKit', :path => '../'
+
+  target 'InjectedContentKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

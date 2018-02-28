@@ -25,6 +25,8 @@
 		9C32B30C2032D08A009E5736 /* SSCatchInviteScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32B3092032D08A009E5736 /* SSCatchInviteScheduler.m */; };
 		9C32B30D2032D08A009E5736 /* SSCatchShareOrganizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32B30B2032D08A009E5736 /* SSCatchShareOrganizer.m */; };
 		9C32B3112032E0F3009E5736 /* SSCatchPayMethodScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32B30F2032E0F2009E5736 /* SSCatchPayMethodScheduler.m */; };
+		9CADC383204105260021684D /* SimpleSection-macho.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CADC382204105260021684D /* SimpleSection-macho.o */; };
+		9CADC3852041057B0021684D /* SimpleSection-elf.o in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CADC3842041057B0021684D /* SimpleSection-elf.o */; };
 		9CBB8533A1B3F2C8A427232E /* libPods-InjectedContentKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05729B7D7B52AA8E108E87B /* libPods-InjectedContentKit_Example.a */; };
 		DAF4F6921D258A2C2EDB6BC0 /* libPods-InjectedContentKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A552A78EB81B4BC48250EAD /* libPods-InjectedContentKit_Tests.a */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,9 @@
 		9C32B30B2032D08A009E5736 /* SSCatchShareOrganizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCatchShareOrganizer.m; sourceTree = "<group>"; };
 		9C32B30F2032E0F2009E5736 /* SSCatchPayMethodScheduler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCatchPayMethodScheduler.m; sourceTree = "<group>"; };
 		9C32B3102032E0F3009E5736 /* SSCatchPayMethodScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCatchPayMethodScheduler.h; sourceTree = "<group>"; };
+		9CADC382204105260021684D /* SimpleSection-macho.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = "SimpleSection-macho.o"; sourceTree = "<group>"; };
+		9CADC3842041057B0021684D /* SimpleSection-elf.o */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = "SimpleSection-elf.o"; sourceTree = "<group>"; };
+		9CADC386204106830021684D /* elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = elf.h; sourceTree = "<group>"; };
 		A05729B7D7B52AA8E108E87B /* libPods-InjectedContentKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjectedContentKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BB5C4BBC0E431D0A48F73 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B614FED82F60348BF3E6B744 /* Pods-InjectedContentKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjectedContentKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjectedContentKit_Example/Pods-InjectedContentKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +90,8 @@
 			files = (
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				9CADC383204105260021684D /* SimpleSection-macho.o in Frameworks */,
+				9CADC3852041057B0021684D /* SimpleSection-elf.o in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				9CBB8533A1B3F2C8A427232E /* libPods-InjectedContentKit_Example.a in Frameworks */,
 			);
@@ -158,6 +165,9 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9CADC386204106830021684D /* elf.h */,
+				9CADC3842041057B0021684D /* SimpleSection-elf.o */,
+				9CADC382204105260021684D /* SimpleSection-macho.o */,
 				6003F595195388D20070C39A /* InjectedContentKit-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,

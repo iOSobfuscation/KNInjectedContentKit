@@ -1,29 +1,8 @@
 # YTTInjectedContentKit
 
-[![CI Status](http://img.shields.io/travis/flypigrmvb/InjectedContentKit.svg?style=flat)](https://travis-ci.org/flypigrmvb/InjectedContentKit)
-[![Version](https://img.shields.io/cocoapods/v/InjectedContentKit.svg?style=flat)](http://cocoapods.org/pods/InjectedContentKit)
-[![License](https://img.shields.io/cocoapods/l/InjectedContentKit.svg?style=flat)](http://cocoapods.org/pods/InjectedContentKit)
-[![Platform](https://img.shields.io/cocoapods/p/InjectedContentKit.svg?style=flat)](http://cocoapods.org/pods/InjectedContentKit)
+iOS壳版本场景下的批量修改类名、属性名、插入混淆代码的shell脚本
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-InjectedContentKit is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'InjectedContentKit'
-```
-
-## Author
-
-flypigrmvb, 862709539@qq.com
-
-## License
-
-InjectedContentKit is available under the MIT license. See the LICENSE file for more info.
+具体的实现和使用方法请参考我的博客文章：  
+[iOS使用shell脚本注入混淆内容](https://my.oschina.net/FEEDFACF/blog/1621956)  
+[iOS使用Shell脚本批量修改类名称](https://my.oschina.net/FEEDFACF/blog/1627398)  
+[iOS使用shell脚本批量修改属性](https://my.oschina.net/FEEDFACF/blog/1626928)  

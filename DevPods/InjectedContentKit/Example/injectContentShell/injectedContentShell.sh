@@ -10,6 +10,7 @@ cfg_file="$(pwd)/injectedContentConfig.cfg"
 
 ############## 工具类方法
 function printHighlightMessage {
+	#mark: echo 颜色选项 http://www.jb51.net/article/43968.htm
 	echo -e "\033[31m $1 \033[0m"
 }
 
@@ -18,8 +19,8 @@ function printHighlightMessage {
 # mac安装gunSed  http://blog.csdn.net/sun_wangdong/article/details/71078083
 which_sed=`which sed`
 echo $which_sed
-echo "testresult = $(expr $which_sed : '.*/gnu-sed/')"
-if [[ $(expr $which_sed : '.*/gnu-sed/') -gt 0 ]]; then
+echo "testresult = $(expr "$which_sed" : '.*/gnu-sed/')"
+if [[ $(expr "$which_sed" : '.*/gnu-sed/') -gt 0 ]]; then
 	echo "检测到使用gun sed"
 else
 	if [ ! `which brew` ]
@@ -35,7 +36,6 @@ else
 	source ./set-gun-sed-path.sh
 	echo "set PATH done"
 
-	#mark: echo 颜色选项 http://www.jb51.net/article/43968.htm
 	echo "请手动执行命令,然后重新执行"
 	command="PATH=\"/usr/local/Cellar/gnu-sed/4.4/bin:\$PATH\""
 	printHighlightMessage $command
@@ -115,7 +115,7 @@ function read_implement_file_recursively {
 			else 
 				# 文件
 				echo "处理文件 ${itemPath}"
-				if [[ $(expr $item : '.*\.m') -gt 0 ]]; then
+				if [[ $(expr "$item" : '.*\.m') -gt 0 ]]; then
 					echo ">>>>>>>>>>>>mmmmmmm"
 					implement_source_file_array[$implement_source_file_count]=${itemPath}
 					implement_source_file_count=$[ implement_source_file_count + 1 ];
@@ -147,6 +147,7 @@ function addInjectedContent {
 
 		echo ">>>>>>>${injected_content}"
 		# mark: sed 命令中使用变量 http://blog.csdn.net/lepton126/article/details/36374933
+		# 在匹配的行下面添加插入内容
 		sed -i '/^- \(.*\){$/{
 			a\ '"$injected_content"'
 		}' ${file}

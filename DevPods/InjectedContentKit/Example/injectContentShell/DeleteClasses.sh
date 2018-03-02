@@ -6,7 +6,7 @@
 ####### 配置
 # 定义需要替换的类的查找目录，作为参数传递给GenRenameClasses.sh脚本使用，最终获取到的类名称保存到配置文件中，以给后续步骤使用
 class_search_dir="$(pwd)/../injectedContentKit/Business000"
-class_search_dir="/Users/aron/git-repo/YTTInjectedContentKit/DevPods/InjectedContentKit/Example/Business"
+class_search_dir="/Users/aron/git-repo/YTTInjectedContentKit/DevPods/InjectedContentKit/Example/InjectedContentKit/Business"
 
 # 类前缀
 class_prefix="XYZ"

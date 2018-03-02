@@ -8,26 +8,26 @@
 
 ####### 配置
 # 定义需要替换的类的查找目录，作为参数传递给GenRenameClasses.sh脚本使用，最终获取到的类名称保存到配置文件中，以给后续步骤使用
-class_search_dir="$(pwd)/../injectedContentKit/Business000"
+class_search_dir="$(pwd)/../injectedContentKit/Business"
 # class_search_dir="$(pwd)/../injectedContentKit/Business"
-class_search_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Business"
+# class_search_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Business"
 # 配置文件
 cfg_file="$(pwd)/RenameClasses.cfg"
 
 # project.pbxproj文件目录，需要替换该配置文件中的类的名称配置
-pbxproj_dir="$(pwd)/../InjectedContentKit.xcodeproj000"
+pbxproj_dir="$(pwd)/../InjectedContentKit.xcodeproj"
 # pbxproj_dir="$(pwd)/../InjectedContentKit.xcodeproj"
-pbxproj_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch.xcodeproj"
+# pbxproj_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch.xcodeproj"
 
 # 定义该目录下的文件需要进行批量替换处理
-class_name_replace_dir="$(pwd)/../InjectedContentKit000"
+class_name_replace_dir="$(pwd)/../InjectedContentKit"
 # class_name_replace_dir="$(pwd)/../InjectedContentKit"
-class_name_replace_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Business"
+# class_name_replace_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Business"
 
 # 定义该目录下的文件需要进行批量替换处理
-class_name_replace_support_dir="$(pwd)/../InjectedContentKit000"
-# class_name_replace_support_dir="$(pwd)/../InjectedContentKit"
-class_name_replace_support_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/SupportingFiles"
+# class_name_replace_support_dir="$(pwd)/../InjectedContentKit000"
+# # class_name_replace_support_dir="$(pwd)/../InjectedContentKit"
+# class_name_replace_support_dir="/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/SupportingFiles"
 
 
 # 类前缀
@@ -54,8 +54,8 @@ checkDirCore $class_name_replace_dir "指定类名称修改的目录不存在"
 class_name_replace_dir=${CheckInputDestDirRecursiveReturnValue}
 
 # 检测 class_name_replace_support_dir
-checkDirCore $class_name_replace_support_dir "指定类名称修改的目录不存在"
-class_name_replace_support_dir=${CheckInputDestDirRecursiveReturnValue}
+# checkDirCore $class_name_replace_support_dir "指定类名称修改的目录不存在"
+# class_name_replace_support_dir=${CheckInputDestDirRecursiveReturnValue}
 
 
 # 检测或者创建配置文件
@@ -110,9 +110,9 @@ function add_prefix_suffix_to_class {
 			s/'"${original_class_name}"'/'"${result_class_name}"'/g
 		}' `grep ${original_class_name} -rl ${class_name_replace_dir}`
 
-		sed -i '{
-			s/'"${original_class_name}"'/'"${result_class_name}"'/g
-		}' `grep ${original_class_name} -rl ${class_name_replace_support_dir}`
+		# sed -i '{
+		# 	s/'"${original_class_name}"'/'"${result_class_name}"'/g
+		# }' `grep ${original_class_name} -rl ${class_name_replace_support_dir}`
 
 		echo "正在处理类 ${original_class_name}..."
 	done

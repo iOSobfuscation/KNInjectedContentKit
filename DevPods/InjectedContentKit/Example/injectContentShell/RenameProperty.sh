@@ -3,15 +3,15 @@
 
 ####### 配置
 # classes类目录
-classes_dir="$(pwd)/../InjectedContentKitx"
+classes_dir="$(pwd)/../InjectedContentKit"
 # 黑名单类目录
 declare -a custom_blacklist_search_dirs
-custom_blacklist_search_dirs=("/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/SSCatchAPI" 
-	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Categories" 
-	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Components" 
-	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/External" 
-	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/HandyTools" 
-	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Macros" )
+# custom_blacklist_search_dirs=("/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/SSCatchAPI" 
+# 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Categories" 
+# 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Components" 
+# 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/External" 
+# 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/HandyTools" 
+# 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Macros" )
 # 替换的属性配置文件
 cfg_file="$(pwd)/PropertiesConfigs.cfg"
 # 属性黑名单配置文件

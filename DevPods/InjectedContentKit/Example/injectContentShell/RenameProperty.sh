@@ -13,7 +13,7 @@ declare -a custom_blacklist_search_dirs
 # 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/HandyTools" 
 # 	"/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/Macros" )
 # 替换的属性配置文件
-cfg_file="$(pwd)/PropertiesConfigs.cfg"
+cfg_file="$(pwd)/RenameProperties.cfg"
 # 属性黑名单配置文件
 custom_blacklist_cfg_file="$(pwd)/CustomPropertiesBlackListConfig.cfg"
 custom_blacklist_cfg_tmp_file="$(pwd)/TmpCustomPropertiesBlackListConfig.cfg"

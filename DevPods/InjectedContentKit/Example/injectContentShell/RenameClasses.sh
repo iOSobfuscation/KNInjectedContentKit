@@ -40,6 +40,7 @@ class_suffix="ABC"
 
 # 导入工具脚本
 . ./FileUtil.sh
+. ./EnvCheckUtil.sh
 
 # 检测 class_search_dir
 checkDirCore $class_search_dir "指定类的查找目录不存在"
@@ -60,6 +61,10 @@ class_name_replace_dir=${CheckInputDestDirRecursiveReturnValue}
 
 # 检测或者创建配置文件
 checkOrCreateFile $cfg_file
+
+
+# 检测gun sed
+gunSedInstallCheck
 
 
 ####### 数据定义

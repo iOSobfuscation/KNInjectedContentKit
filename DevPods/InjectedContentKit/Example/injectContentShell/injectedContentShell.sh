@@ -15,54 +15,17 @@ function printHighlightMessage {
 }
 
 
-# 检查是否安装gunsed
-# mac安装gunSed  http://blog.csdn.net/sun_wangdong/article/details/71078083
-which_sed=`which sed`
-echo $which_sed
-echo "testresult = $(expr "$which_sed" : '.*/gnu-sed/')"
-if [[ $(expr "$which_sed" : '.*/gnu-sed/') -gt 0 ]]; then
-	echo "检测到使用gun sed"
-else
-	if [ ! `which brew` ]
-	then
-		echo 'Homebrew not found. Trying to install...'
-                    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
-			|| exit 1
-	fi
-	echo 'Trying to install gun sed...'
-	brew install gnu-sed --with-default-names || exit 1
-	# 设置局部环境变量
-	echo "set PATH...."
-	source ./set-gun-sed-path.sh
-	echo "set PATH done"
+# 导入工具脚本
+. ./FileUtil.sh
+. ./EnvCheckUtil.sh
 
-	echo "请手动执行命令,然后重新执行"
-	command="PATH=\"/usr/local/Cellar/gnu-sed/4.4/bin:\$PATH\""
-	printHighlightMessage $command
-	echo ""
-	exit 1
-fi
+# 检测gun sed
+gunSedInstallCheck
 
 
-# 循环检测输入的文件夹
-function checkInputDestDir {
-	echo -n "请输入需处理源码目录: "
-	read path
-	if [[ -d $path ]]; then
-		to_process_file_dir=$path
-	else
-		echo -n "输入的目录无效，"
-		checkInputDestDir
-	fi
-}
-
-# 需处理源码目录检查
-if [[ -d $to_process_file_dir ]]; then
-	echo "需处理源码目录存在 $to_process_file_dir"
-else
-	echo "请确认需处理源码目录是否存在 $to_process_file_dir"
-	checkInputDestDir
-fi
+# 检测 property_name_replace_dir
+checkDirCore $to_process_file_dir "指定类文件搜索目录不存在"
+to_process_file_dir=${CheckInputDestDirRecursiveReturnValue}
 
 # mark: p261
 # 配置文件检查

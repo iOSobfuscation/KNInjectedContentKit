@@ -3,7 +3,7 @@
 
 ####### 配置
 # classes类目录
-classes_dir="$(pwd)/../InjectedContentKit"
+property_name_replace_dir="$(pwd)/../InjectedContentKit"
 # 黑名单类目录
 declare -a custom_blacklist_search_dirs
 # custom_blacklist_search_dirs=("/Users/aron/PuTaoWorkSpace/project/sscatch/sscatch/Classes/SSCatchAPI" 
@@ -24,39 +24,21 @@ class_suffix="abc"
 
 
 ####### 配置检查处理
-# 检测文件是否存在，不存在则创建
-checkOrCreateFile() {
-	file=$1
-	if [[ -f $file ]]; then
-		echo "检测到配置文件存在 $file"
-	else
-		echo "创建配置文件 $file"
-		touch $file
-	fi
-}
 
-# 配置文件检查
+# 导入工具脚本
+. ./FileUtil.sh
+. ./EnvCheckUtil.sh
+
+# 检测或者创建配置文件
 checkOrCreateFile $cfg_file
 
-# 循环检测输入的文件夹
-function checkInputDestDir {
-	echo -n "请输入需处理源码目录: "
-	read path
-	if [[ -d $path ]]; then
-		classes_dir=$path
-	else
-		echo -n "输入的目录无效，"
-		checkInputDestDir
-	fi
-}
+# 检测 property_name_replace_dir
+checkDirCore $property_name_replace_dir "指定属性名称修改的目录不存在"
+property_name_replace_dir=${CheckInputDestDirRecursiveReturnValue}
 
-# 需处理源码目录检查
-if [[ -d $classes_dir ]]; then
-	echo "需处理源码目录存在 $classes_dir"
-else
-	echo "请确认需处理源码目录是否存在 $classes_dir"
-	checkInputDestDir
-fi
+
+# 检测gun sed
+gunSedInstallCheck
 
 
 ####### 数据定义
@@ -109,7 +91,7 @@ function rename_properties {
 		result_prop_name="${class_prefix}${original_prop_name}${class_suffix}"
 		sed -i '{
 			s/'"${original_prop_name}"'/'"${result_prop_name}"'/g
-		}' `grep ${original_prop_name} -rl ${classes_dir}`
+		}' `grep ${original_prop_name} -rl ${property_name_replace_dir}`
 		echo "正在处理属性 ${original_prop_name}....."
 	done
 }
@@ -127,9 +109,9 @@ for (( i = 0; i < ${#custom_blacklist_search_dirs[@]}; i++ )); do
 done
 
 
-# 获取和保存属性到熟悉配置文件
+# 获取和保存属性到属性配置文件
 ./GetAndStoreProperties.sh \
-	-i ${classes_dir}\
+	-i ${property_name_replace_dir}\
 	-o ${cfg_file}\
 	-f \
 	-c ${custom_blacklist_cfg_file}
@@ -138,6 +120,6 @@ done
 # 执行属性重命名
 rename_properties
 
-echo "done."
+echo "重命名属性完成."
 
 

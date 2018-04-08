@@ -27,6 +27,8 @@
 		9C32B3112032E0F3009E5736 /* SSCatchPayMethodScheduler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C32B30F2032E0F2009E5736 /* SSCatchPayMethodScheduler.m */; };
 		9CADC59F204CE7A10021684D /* CodeResources.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9CADC59E204CE7A10021684D /* CodeResources.plist */; };
 		9CBB8533A1B3F2C8A427232E /* libPods-InjectedContentKit_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05729B7D7B52AA8E108E87B /* libPods-InjectedContentKit_Example.a */; };
+		9CF6DF5A207A05BB00D7AD1C /* ICKXibTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CF6DF58207A05BB00D7AD1C /* ICKXibTestViewController.m */; };
+		9CF6DF5B207A05BB00D7AD1C /* ICKXibTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF6DF59207A05BB00D7AD1C /* ICKXibTestViewController.xib */; };
 		DAF4F6921D258A2C2EDB6BC0 /* libPods-InjectedContentKit_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A552A78EB81B4BC48250EAD /* libPods-InjectedContentKit_Tests.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		9C32B3102032E0F3009E5736 /* SSCatchPayMethodScheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCatchPayMethodScheduler.h; sourceTree = "<group>"; };
 		9CADC386204106830021684D /* elf.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = elf.h; sourceTree = "<group>"; };
 		9CADC59E204CE7A10021684D /* CodeResources.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CodeResources.plist; sourceTree = "<group>"; };
+		9CF6DF57207A05BB00D7AD1C /* ICKXibTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICKXibTestViewController.h; sourceTree = "<group>"; };
+		9CF6DF58207A05BB00D7AD1C /* ICKXibTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICKXibTestViewController.m; sourceTree = "<group>"; };
+		9CF6DF59207A05BB00D7AD1C /* ICKXibTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ICKXibTestViewController.xib; sourceTree = "<group>"; };
 		A05729B7D7B52AA8E108E87B /* libPods-InjectedContentKit_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjectedContentKit_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A93BB5C4BBC0E431D0A48F73 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B614FED82F60348BF3E6B744 /* Pods-InjectedContentKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjectedContentKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjectedContentKit_Example/Pods-InjectedContentKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -208,6 +213,9 @@
 				9C32B3092032D08A009E5736 /* SSCatchInviteScheduler.m */,
 				9C32B30A2032D08A009E5736 /* SSCatchShareOrganizer.h */,
 				9C32B30B2032D08A009E5736 /* SSCatchShareOrganizer.m */,
+				9CF6DF57207A05BB00D7AD1C /* ICKXibTestViewController.h */,
+				9CF6DF58207A05BB00D7AD1C /* ICKXibTestViewController.m */,
+				9CF6DF59207A05BB00D7AD1C /* ICKXibTestViewController.xib */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -319,6 +327,7 @@
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				9CF6DF5B207A05BB00D7AD1C /* ICKXibTestViewController.xib in Resources */,
 				9CADC59F204CE7A10021684D /* CodeResources.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +443,7 @@
 				6003F59E195388D20070C39A /* ICKAppDelegate.m in Sources */,
 				9C32B3112032E0F3009E5736 /* SSCatchPayMethodScheduler.m in Sources */,
 				6003F5A7195388D20070C39A /* ICKViewController.m in Sources */,
+				9CF6DF5A207A05BB00D7AD1C /* ICKXibTestViewController.m in Sources */,
 				9C32B30D2032D08A009E5736 /* SSCatchShareOrganizer.m in Sources */,
 				9C32B30C2032D08A009E5736 /* SSCatchInviteScheduler.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import "ICKViewController.h"
 #import <InjectedContentKit.h>
+#import "ICKXibTestViewController.h"
 
 @implementation ICKViewController
 
@@ -58,6 +59,11 @@
     [dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NSLog(@"key=%@ ==> obj=%@", key, obj);
     }];
+    
+    // 跳转到XIB
+    ICKXibTestViewController* xibTestVC = [ICKXibTestViewController new];
+    [self.navigationController pushViewController:xibTestVC animated:YES];
+    
 }
 
 @end

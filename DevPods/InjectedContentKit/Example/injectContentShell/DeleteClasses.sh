@@ -29,3 +29,8 @@ for class_file_path in `find ${class_search_dir} -name "XYZ*ABC.[h|m]"`; do
 	rm -f ${class_file_path}
 done
 
+for class_file_path in `find ${class_search_dir} -name "XYZ*ABC.xib"`; do
+	echo "删除文件>>>${class_file_path}"
+	rm -f ${class_file_path}
+done
+

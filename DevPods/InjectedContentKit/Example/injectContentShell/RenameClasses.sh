@@ -147,6 +147,14 @@ function rename_class_file {
 		echo "new_file_path = ${new_file_path}"
 		mv -f $find_result $new_file_path
 
+		# .xib 文件
+		pattern="${original_class_name}\.xib"
+		find_result=$(find ${class_name_replace_dir} -name ${pattern})
+		new_file_path=${find_result/$original_class_name/$result_class_name}
+		echo "find_result = ${find_result}"
+		echo "new_file_path = ${new_file_path}"
+		mv -f $find_result $new_file_path
+
 	done
 }
 

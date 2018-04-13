@@ -4,7 +4,7 @@
 
 # 需处理文件目录
 # mark: TODO
-to_process_file_dir="$(pwd)/../injectedContentKit/Business000"
+to_process_file_dir="$(pwd)/../injectedContentKit/Business"
 # 配置文件
 cfg_file="$(pwd)/injectedContentConfig.cfg"
 

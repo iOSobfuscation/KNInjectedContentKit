@@ -1,5 +1,11 @@
 #!/bin/bash
 
+############## 工具类方法
+function printHighlightMessage {
+	#mark: echo 颜色选项 http://www.jb51.net/article/43968.htm
+	echo -e "\033[31m $1 \033[0m"
+}
+
 # 检测是否安装gun sed，mac 内置的sed会有些问题，所以需要安装gun sed
 gunSedInstallCheck() {
 	# 检查是否安装gunsed
@@ -22,9 +28,9 @@ gunSedInstallCheck() {
 		echo 'Trying to install gun sed...'
 		brew install gnu-sed --with-default-names || exit 1
 		# 设置局部环境变量
-		echo "set PATH...."
-		source ./set-gun-sed-path.sh
-		echo "set PATH done"
+		# echo "set PATH...."
+		# source ./set-gun-sed-path.sh
+		# echo "set PATH done"
 
 		echo "请手动执行命令,然后重新执行"
 		command="PATH=\"/usr/local/Cellar/gnu-sed/4.4/bin:\$PATH\""

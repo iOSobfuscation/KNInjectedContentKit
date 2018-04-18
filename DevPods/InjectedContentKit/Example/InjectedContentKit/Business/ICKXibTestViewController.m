@@ -15,11 +15,14 @@
 @implementation ICKXibTestViewController
 
 - (void)viewDidLoad {
+ [[GameDetailDataComposer new] loadDataWithBlock:nil];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
+[[GameDetailDataComposer new] loadDataWithBlock:nil];
+ [[GameDetailDataComposer new] loadDataWithBlock:nil];
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -29,9 +32,32 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ [[GameDetailDataComposer new] loadDataWithBlock:nil];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)hello:(NSString*)name
+          age:(NSUInteger)age {
+[[GameDetailDataComposer new] loadDataWithBlock:nil];
+    
+}
+
+- (void)fetchCodeWithToast:(BOOL)showToast completion:(void (^)(NSString* invitationCode))block {
+ [[GameDetailDataComposer new] loadDataWithBlock:nil];
+    
+    
+    
+}
+
+- (void)fetchInvitateWithCode:(NSString*)invitationCode
+                        toast:(BOOL)showToast
+                   completion:(void (^)(BOOL result))block {
+[[GameDetailDataComposer new] loadDataWithBlock:nil];
+    
+    
+}
+
 
 @end

@@ -107,12 +107,22 @@ function addInjectedContent {
 		echo ${file}
 		injected_content=${config_content_array[$injected_content_index]};
 		injected_content_index=$[ $injected_content_index + 1 ]
+		if [[ injected_content_index -ge ${#config_content_array[@]} ]]; then
+			injected_content_index=0;
+		fi
 
-		echo ">>>>>>>${injected_content}"
+		echo ">>>>>>>${injected_content}  #${injected_content_index}"
 		# mark: sed 命令中使用变量 http://blog.csdn.net/lepton126/article/details/36374933
 		# 在匹配的行下面添加插入内容
 		sed -i '/^- \(.*\){$/{
 			a\ '"$injected_content"'
+		}' ${file}
+
+		sed -i '/^- \(.*\)/{
+			:tag1;
+ 			N;
+ 			/{$/!b tag1;
+ 			a '"$injected_content"'
 		}' ${file}
 
 	done;

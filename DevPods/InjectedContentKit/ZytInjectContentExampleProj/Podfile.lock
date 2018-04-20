@@ -1,0 +1,16 @@
+PODS:
+  - InjectedContentKit (0.1.0)
+
+DEPENDENCIES:
+  - InjectedContentKit (from `../`)
+
+EXTERNAL SOURCES:
+  InjectedContentKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  InjectedContentKit: d621594612f45f306acfc194ba3e0f0bb9764bc2
+
+PODFILE CHECKSUM: 7a475059e519ac0ac3a05b71ac0f0df022af6f1d
+
+COCOAPODS: 1.2.1

@@ -1,0 +1,6 @@
+#use_frameworks!
+
+target 'ZytInjectContentExampleProj' do
+  pod 'InjectedContentKit', :path => '../'
+
+end

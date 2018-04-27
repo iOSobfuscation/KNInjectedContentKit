@@ -1,0 +1,31 @@
+######## test Original Content ########
+
+### Project.pbxproj
+
+path = ZytInjectContentExampleProj;
+
+/* Begin PBXNativeTarget section */
+name = ZytInjectContentExampleProj;
+productName = ZytInjectContentExampleProj;
+
+/* Begin XCBuildConfiguration section */
+INFOPLIST_FILE = ZytInjectContentExampleProj/Info.plist;
+PRODUCT_BUNDLE_IDENTIFIER = YTT.ZytInjectContentExampleProj;
+
+
+### Podfile
+
+target 'ZytInjectContentExampleProj' do
+
+### ZytInjectContentExampleProj.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+location = "self:ZytInjectContentExampleProj.xcodeproj">
+
+
+### ZytInjectContentExampleProj.xcodeproj/xcuserdata/aron.xcuserdatad/xcschemes/xcschememanagement.plist
+
+<key>ZytInjectContentExampleProj.xcscheme</key>
+
+
+### ZytInjectContentExampleProj.xcworkspace/contents.xcworkspacedata
+
+location = "group:ZytInjectContentExampleProj.xcodeproj">
